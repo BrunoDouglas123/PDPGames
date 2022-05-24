@@ -13,6 +13,7 @@ body {
 }
 
 #img_logo {
+    display: flex;
     margin-top: 16px;
 }
 
@@ -27,24 +28,60 @@ body {
 }
 
 #lista1 {
+    color: #FFFFFF;
     font-family: 'Poppins';
+    font-size: 16px;
     list-style-type: none;
 
     margin-top: 16px;
 }
 
 /* Menu Navegacao 2 */
+.menu-lateral {
+    background-color:brown;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 15%;
+}
+
 #menu-2 {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-direction: column;
 
-    margin-top: 0;
+    margin-top: 20px;
     padding-left: 40px;
 }
 
-#lista2 {
+a {
+    color: red;
     font-family: 'Poppins';
+    font-weight: bold;
+    list-style-type: none;
+    text-align: center;
     list-style-type: none;
     margin-top: 51px;
+}
+
+button {
+    background-color: grey;
+    border-radius: 15px;
+
+    margin-top: 40px;
+    height: 40px;
+    width: 140px;
+}
+
+footer {
+    position: absolute;
+    background-color: black;
+    height: 20px;
+    width: 100%;
+    margin-top: 1000px;
+    bottom: 0;
 }
