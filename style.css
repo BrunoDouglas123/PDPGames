@@ -39,6 +39,48 @@ body {
     margin-top: 16px;
 }
 
+.menu-2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 10%;
+    background-color: #ffffff;
+    margin-top: 0px;
+    padding-left: 15px;
+}
+
+.lista2 {
+    position: relative; bottom: 358px; left: 50px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: medium;
+    list-style-type: none;
+    margin-top: 35px;
+    z-index: 2;
+}
+/*Icones menu2 */
+.icones {
+   position: relative; top: 0px; left: 5px;
+   padding-right: 10px;
+   margin-top: 30px;
+   width: 35px;
+   height: 30px;
+   z-index: 2;
+}
+
+.fundoicones {
+    position: relative; bottom: 710px;
+    width: 123px;
+    height: 30.5px;
+    border-radius: 5px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-top: 25px;
+    background: #e1e6e3;
+    list-style-type: none;
+    z-index: 1;
+}
+
 /* Menu Navegacao 2 */
 .menu-lateral {
     background-color:#FFF;
