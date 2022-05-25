@@ -15,6 +15,9 @@ body {
 #img_logo {
     display: flex;
     margin-top: 16px;
+
+    width: 40px; 
+    height: 40px;
 }
 
 #menu-1 {
@@ -38,31 +41,21 @@ body {
 
 /* Menu Navegacao 2 */
 .menu-lateral {
-    background-color:brown;
+    background-color:#FFF;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    padding-left: 2vw;
     height: 100%;
-    width: 15%;
-}
-
-#menu-2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-
-    margin-top: 20px;
-    padding-left: 40px;
+    width: 6%;
 }
 
 a {
-    color: red;
+    color: #FFF;
     font-family: 'Poppins';
     font-weight: bold;
-    list-style-type: none;
     text-align: center;
     list-style-type: none;
     margin-top: 51px;
@@ -77,11 +70,41 @@ button {
     width: 140px;
 }
 
+a {
+    list-style-type: none;
+}
+
 footer {
     position: absolute;
-    background-color: black;
-    height: 20px;
+    background-color: brown;
+    height: 131px;
     width: 100%;
-    margin-top: 1000px;
+    margin-top: 1200px;
     bottom: 0;
+}
+
+.footer-containt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#rede {
+    position: absolute;
+    width:20px; 
+    height:20px;
+
+    padding-left: 10px;
+    margin-left: 20px;
+}
+
+#d-autorais {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 15px;
+
+    padding-top: 30px;
 }
