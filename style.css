@@ -110,8 +110,6 @@ footer {
     background-color: brown;
     height: 131px;
     width: 100%;
-    margin-top: 100px;
-    bottom: 0;
 }
 
 .footer-containt {
@@ -160,4 +158,11 @@ footer {
     font-size: 15px;
 
     padding-top: 30px;
+}
+
+/* DataBase */
+
+.game1 {
+    display: flex;
+    justify-content: center;
 }
