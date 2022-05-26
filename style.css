@@ -161,29 +161,3 @@ footer {
 
     padding-top: 30px;
 }
-
-/* Dados */
-
-.game1 {
-    background-color: brown;
-    width: 200px;
-    height: 20px;
-    
-    padding-top: 20px;
-}
-
-.game2 {
-    background-color: brown;
-    width: 200px;
-    height: 20px;
-
-    padding-top: 20px;
-}
-
-.game3 {
-    background-color: brown;
-    width: 200px;
-    height: 20px;
-    
-    padding-top: 20px;
-}
