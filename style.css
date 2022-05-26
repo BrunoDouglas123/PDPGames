@@ -110,7 +110,7 @@ footer {
     background-color: brown;
     height: 131px;
     width: 100%;
-    margin-top: 1200px;
+    margin-top: 100px;
     bottom: 0;
 }
 
@@ -160,4 +160,30 @@ footer {
     font-size: 15px;
 
     padding-top: 30px;
+}
+
+/* Dados */
+
+.game1 {
+    background-color: brown;
+    width: 200px;
+    height: 20px;
+    
+    padding-top: 20px;
+}
+
+.game2 {
+    background-color: brown;
+    width: 200px;
+    height: 20px;
+
+    padding-top: 20px;
+}
+
+.game3 {
+    background-color: brown;
+    width: 200px;
+    height: 20px;
+    
+    padding-top: 20px;
 }
