@@ -137,7 +137,7 @@ footer {
     flex-direction: row;
     justify-content: center;
 
-    padding-top: 61px;
+    padding-top: 10px;
     padding-left: 20px;
 }
 
@@ -147,7 +147,7 @@ footer {
     height:20px;
 
     padding-left: 10px;
-    margin-top: -40px;
+    margin-top: 0;
     margin-left: -210px;
 }
 
@@ -157,7 +157,7 @@ footer {
     height:20px;
 
     padding-left: 10px;
-    margin-top: -40px;
+    margin-top: 0;
     margin-left: -169px;
 }
 
@@ -167,7 +167,7 @@ footer {
     height:20px;
 
     padding-left: 10px;
-    margin-top: -40px;
+    margin-top: 0;
     margin-left: -126px;
 }
 
