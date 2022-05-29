@@ -1,42 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./img/logo.png">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/logo.png" />
+    <link rel="stylesheet" href="style.css" />
     <title>PewDiePie</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <nav>
-                <ul id="menu-1">
-                    <img src="./img/logo.png" id="img_logo" alt="Logo" width="40px" height="40px">
-                    <li id="lista1">PC</li>
-                    <li id="lista1">Browser</li>
-                    <li id="lista1">All</li>
-                    <li id="lista1">Favoritos</li>
-                </ul>
-            </nav>
-        </header>
+      <header>
+        <nav>
+          <ul id="menu-1">
+            <img src="./img/logo.png" id="img_logo" alt="Logo" />
+            <li id="lista1">PC</li>
+            <li id="lista1">Browser</li>
+            <li id="lista1">All</li>
+            <li id="lista1">Favoritos</li>
+          </ul>
+        </nav>
+      </header>
     </div>
 
-    <div>
-        <nav>
-            <ul id="menu-2">
-                <li id="lista2">Home</li>
-                <li id="lista2">MMOFPS</li>
-                <li id="lista2">Survival</li>
-                <li id="lista2">Card</li>
-                <li id="lista2">Fighting</li>
-                <li id="lista2">Shooting</li>
-            </ul>
-        </nav>
+    <div class="nav">
+      <nav>
+        <ul class="menu-2">
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('home', 'alphabetical', 'Mais populares')" class="btn-link">
+              <img class="icones" src="img/home-removebg-preview.png" alt="" />
+              Home
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'survival', 'Estilo sobrevivência')" class="btn-link">
+              <img class="icones" src="img/Survival-removebg-preview.png" alt="" />
+              MMOFPS
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'card', 'Estilo cartas')" class="btn-link">
+              <img class="icones" src="img/CardGame.png" alt="" />
+              Cards
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'fighting', 'Estilo luta')" class="btn-link">
+              <img class="icones" src="img/Punch_icon-removebg-preview.png" alt=""/>
+            Fighting
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'shooter', 'Estilo atirar')" class="btn-link">
+              <img class="icones" src="img/shooter-removebg-preview.png" alt="" />
+            Shooting
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'mmofps', 'Estilo fps')" class="btn-link">
+              <img class="icones" src="img/mmo-fps-shooter-removebg-preview.png" alt="" />
+            FPS Shooting
+            </a>
+          </li>
+        </ul>
+   
+      </nav>
     </div>
+
+
+    <div class="main">
+
+      <div class="row">
+        <div class="col-100">
+          <div class="main-title">
+            <h1 class="title" id="title">Lista de jogos mais baixados</h1>
+          </div>
+        </div>
+      </div>
+
+      <div id="result-games"></div>
+
+    </div>
+    
+    <footer>
+      <div class="footer-icons">
+        <a href="https://web.whatsapp.com/"
+          ><img src="./img/icon1.png" id="rede" alt="" title="Whatsapp"
+        /></a>
+        <a href="https://www.facebook.com/"
+          ><img src="./img/icon2.png" id="rede" alt="" title="Facebook"
+        /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="./img/icon3.png" id="rede" alt="" title="Instagram"
+        /></a>
+      </div>
+      <div class="footer-containt">
+        <p id="d-autorais">© 2022 Desenvolvido pela Equipe NPJU.</p>
+      </div>
+    </footer>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
