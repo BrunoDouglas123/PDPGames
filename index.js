@@ -22,8 +22,13 @@ function search(url, title){
 		for(var i = 0; i < data.length; i++){
 			if(i%3==0 && i != 0){
 				game += "</div><div class='row'>"
-			}
-			game += '<div class="col"><div class="thumb"><img class="thumb-img" src="'+ data[i].thumbnail+'" alt="img"><div class="thumb-header"><h1 class="thumb-title">'+ data[i].title+'</h1></div><div class="thumb-body"><p>'+ data[i].short_description+'</p></div><div class="thumb-footer"><a href="'+ data[i].game_url+'" class="btn" target="_blank">Acessar game</a></div></div></div>'
+		}
+		
+		game += '<div class="col"><div class="thumb"><img class="thumb-img" src="'+ 
+			data[i].thumbnail+'" alt="img"><div class="thumb-header"><h1 class="thumb-title">'+data[i].title+'</h1></div><div class="thumb-body"><p>'+ data[i].short_description
+			
+			//Botões de Favoritar e Acessar os Jogos
+			+'</p></div><div class="thumb-footer"><a href="'+data[i].game_url+'" class="btn" target="_blank">Favoritar game</a><a href="'+data[i].game_url+'" class="btn" target="_blank">Acessar game</a></div></div></div>'
 			
 		}
 		game += "</div>";
