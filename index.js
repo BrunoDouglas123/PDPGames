@@ -28,7 +28,7 @@ function search(url, title){
 			data[i].thumbnail+'" alt="img"><div class="thumb-header"><h1 class="thumb-title">'+data[i].title+'</h1></div><div class="thumb-body"><p>'+ data[i].short_description
 			
 			//Botões de Favoritar e Acessar os Jogos
-			+'</p></div><div class="thumb-footer"><a href="'+data[i].game_url+'" class="btn" target="_blank">Favoritar game</a><a href="'+data[i].game_url+'" class="btn" target="_blank">Acessar game</a></div></div></div>'
+			+'</p></div><div class="thumb-footer"><a href="'+data[i].game_url+'" class="btn" target="_blank">Acessar game</a><a href="'+data[i].game_url+'" class="btn1" target="_blank">⭐</a></div></div></div>'
 			
 		}
 		game += "</div>";
@@ -55,3 +55,26 @@ function filter(myFilter, myFilter2, title){
 	}
 	search(filter, title);
 }
+
+$(function() {
+	$("a.favoritos").click(function(e) {
+	  e.preventDefault();
+	  // aqui deve definir o endereço do site
+	  var url = 'http://www.linhadecomando.com';
+	  // aqui deve definir o titulo do site
+	  var title = 'Bem-vindo ao linhadecomando.com';
+  
+	  // mozilla firefox          
+	  if ($.browser.mozilla == true) {
+		  window.sidebar.addPanel(title, url, '');
+		return false;
+	  // internet explorer
+	  } else if($.browser.msie == true) {  
+		  window.external.AddFavorite( url, title);
+		  return false;
+	  // outros navegadores
+	  } else {
+		  alert('Pressione as teclas CTRL + D para adicionar aos favoritos.');
+	  }
+	});
+ });
