@@ -21,6 +21,7 @@ body {
 #img_logo {
     display: flex;
     margin-top: -5px;
+    margin-left: -12px;
 
     width: 61px; 
     height: 61px;
@@ -83,7 +84,7 @@ button:hover {
 }
 
 #botao-menu {
-    outline:none;  
+    outline:none;
 }
 
 /* Menu Navegacao 2 */
