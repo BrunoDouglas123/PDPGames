@@ -99,17 +99,19 @@ ul {
   position: relative; right: 50px;
 }
 .fundoicones {
-  position: relative; left: 0px; bottom: 480px;
-    width: 200px;
-    height: 40px;
-    border-radius: 5px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    margin-top: 15px;
-    background: #e1e6e3;
-    list-style-type: none;
-    z-index: 1;
+  position: relative; left: 0px; 
+  bottom: 480px;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin-top: 15px;
+  background: #e1e6e3;
+  list-style-type: none;
+  z-index: 1;
 }
+
 button {
   background-color: grey;
   border-radius: 15px;
