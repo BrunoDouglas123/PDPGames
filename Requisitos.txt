@@ -1,0 +1,21 @@
+Recurso: https://www.freetogame.com/api-doc
+
+https://pokeapi.co/api/v2/pokemon/
+
+Requisitos
+(  )01. Quando a opção ‘home’ for selecionada, devem ser apresentados
+    os jogos com maior popularidade.
+(X)02. Deve conter ao menos 8 opções para selecionar no menu lateral.
+(X)03. Deve conter as opções ‘PC, Browser e all’ na barra de navegação
+    da aplicação.
+(  )04. Deve ser possível cruzar os filtros entre ‘menus’ e ‘navegação’
+(  )05. Inicialmente deve ser apresentado no máximo 10 elementos na listagem.
+(  )06. O primeiro elemento da listagem deve ser apresentado com destaque.
+(  )07. Deve conter uma opção de carregar mais, que carrega mais 10 elementos
+    em tela a cada vez que é clicado.
+(  )UC 08. Deve conter uma opção de carregar mais, que carrega mais 10
+    elementos em tela a cada vez que é clicado.
+(  )UC 09. Deve ser possível favoritar elementos.
+(  )UC 10. Deve ser possível consultar elementos favoritados.
+(  )UC 11. Ao clicar em um jogo, deve abrir uma nova aba que navega até a
+    página oficial do jogo no site freetogame.

@@ -54,22 +54,21 @@ a {
 }
 
 button {
-    font-family: 'Patron';
-    cursor: pointer;
-    outline: none;
-    font-size: 35px;
-    padding-top: -4px;
-    border-radius: 18px;
-    text-decoration:none;
-    background: none;
-    transition: box-shadow 0.1s;
-    color: #202020;
-    border: 4px solid #202020;
-    width: 120px;
-    height: 56px;
-    margin-top: -5px;
-
-    padding-left: 20px;
+  font-family: 'Patron';
+  cursor: pointer;
+  outline: none;
+  font-size: 35px;
+  padding-top: -4px;
+  border-radius: 18px;
+  text-decoration: none;
+  background: none;
+  transition: box-shadow 0.1s;
+  color: rgb(97, 48, 97);
+  border: 4px solid rgb(97, 48, 97);
+  width: 120px;
+  height: 56px;
+  margin-top: -5px;
+  padding-left: 20px;
 }
 
 button:hover {

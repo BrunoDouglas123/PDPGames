@@ -12,13 +12,14 @@ const options = {
 	}
 };
 
-
 function search(url, title){
 	fetch(url, options)
 	.then(response => response.json())
 	.then(data => {
 		console.log(data);
-		var game = "<div class='row'>";     // para para 3 collumns a cada row
+		var game = "<div class='row'>";
+		
+		// para para 3 collumns a cada row
 		for(var i = 0; i < data.length; i++){
 			if(i%3==0 && i != 0){
 				game += "</div><div class='row'>"
