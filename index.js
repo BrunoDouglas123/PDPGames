@@ -29,7 +29,7 @@ function search(url, title){
 			data[i].thumbnail+'" alt="img"><div class="thumb-header"><h1 class="thumb-title">'+data[i].title+'</h1></div><div class="thumb-body"><p>'+ data[i].short_description
 			
 			//Botões de Favoritar e Acessar os Jogos
-			+'</p></div><div class="thumb-footer"><a href="'+data[i].game_url+'" class="btn" target="_blank">Acessar game</a><a href="'+data[i].game_url+'" class="btn1" target="_blank">⭐</a></div></div></div>'
+			+'</p></div><div class="thumb-footer"><a href="'+data[i].game_url+'" class="btn" target="_blank">Acessar game</a>&ensp;<a href="'+data[i].game_url+'" class="btn1" target="_blank">⭐</a></div></div></div>'
 			
 		}
 		game += "</div>";
