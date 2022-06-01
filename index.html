@@ -11,31 +11,28 @@
 <body>
     <div class="container">
         <header>
-          <nav>
             <ul id="menu-1">
-                    <img src="./img/logo.png" id="img_logo" alt="Logo" >
-                    <button id="botao-menu">
-                        <a href=""><li id="lista1">PC</li></a>
-                    </button>
+                <img src="./img/logo.png" id="img_logo" alt="Logo" >
+              <button id="botao-menu">
+                <a href=""><li id="lista1">PC</li></a>
+              </button>
 
-                    <button id="botao-menu">
-                        <a href=""><li id="lista1">Browser</li></a>
-                    </button>
+              <button id="botao-menu">
+                <a href=""><li id="lista1">Browser</li></a>
+              </button>
 
-                    <button id="botao-menu">
-                        <a href=""><li id="lista1">All</li></a>
-                    </button>
+              <button id="botao-menu">
+                <a href=""><li id="lista1">All</li></a>
+              </button>
 
-                    <button id="botao-menu">    
-                        <a href=""><li id="lista1">Favoritos</li>
-                    </button>
+              <button id="botao-menu">    
+                <a href=""><li id="lista1">Favoritos</li>
+              </button>
             </ul>
-          </nav>
         </header>
       </div>
   
       <div class="nav">
-        <nav>
           <ul class="menu-2">
             <li class="lista2">
               <a href="javascript:void(0);" onclick="filter('home', 'alphabetical', 'Mais populares')" class="btn-link">
@@ -93,10 +90,8 @@
             </li>
           </ul>
      
-        </nav>
       </div>
-  
-  
+
       <div class="main">
   
         <div class="row">
@@ -110,6 +105,8 @@
         <div id="result-games"></div>
   
       </div>
+
+      <button onclick="createCards(pages)"> carregar mais</button>
       
       <footer>
         <div class="footer-icons">

@@ -42,6 +42,11 @@ function search(url, title){
 	.catch(err => console.error(err));
 }
 
+const createBanner = data => {// altera o banner
+    document.getElementById("banner").style.backgroundImage = 'url(' + data.thumbnail.replace("thumbnail.jpg","background.webp") +')';
+    document.getElementById("banner").href = data.game_url;
+}
+
 
 filter('home', 'alphabetical', 'Mais populares')
 function filter(myFilter, myFilter2, title){
@@ -79,3 +84,19 @@ $(function() {
 	  }
 	});
  });
+
+ const createCards = async (offset = 0,tag = "", platform = "all", sort = "relevance") => {
+    const gamesData = await requestGames(createParams(tag, platform, sort));
+    if(offset === 0){
+        createBanner(gamesData[0]);
+        pages=0;
+    }
+    offset *= 9;
+    offset++;
+    for (let i = 0; i < 9 && (offset + i < gamesData.length) ; i++) {
+        let position = offset + i;
+        createCard(gamesData[position]);
+    }
+    pages++;
+}
+createCards(0);
