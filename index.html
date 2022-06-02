@@ -13,27 +13,32 @@
       <header>
         <nav>
           <ul id="menu-1">
-            <img src="./img/logo.png" id="img_logo" alt="Logo" />
+            <div class="divlogo">
+              <img class="logo" src="./img/logo.png" alt="Logo" />
+              <img class="text" src="./img/NPJU GAMES.png" alt="">
+              
+            </div>
             <li id="lista1">
-              <a  href="javascript:void(0);" onclick="filter('plataform', 'pc', 'Jogos para pc')" class="btn-link">PC</a>
+              <a  href="javascript:void(0);" onclick="filter('plataform', 'pc', 'Jogos para pc', 'pc')" class="btn-link">PC</a>
             </li>
             <li id="lista1">
-              <a  href="javascript:void(0);" onclick="filter('plataform', 'browser', 'Jogos para browser')" class="btn-link">Browser</a>
+              <a  href="javascript:void(0);" onclick="filter('plataform', 'browser', 'Jogos para browser' , 'browser')" class="btn-link">Browser</a>
             </li>
             <li id="lista1">
               <a  href="javascript:void(0);" onclick="filter('plataform', 'all', 'Jogos para todas plataformas')" class="btn-link">ALL</a>
             </li>
-            <li id="lista1">Favoritos</li>
+            <li id="lista1">
+              <a  href="javascript:void(0);" onclick="filter('favoritos', 'all', 'Meus Favoritos')" class="btn-link">Favoritos</a></li>
           </ul>
         </nav>
       </header>
     </div>
 
     <div class="nav">
-      <nav>
-        <ul class="menu-2">
+      <nav id="div-nav">
+        <ul class="menu-2" id="default">
                 <li class="lista2">
-                  <a href="javascript:void(0);" onclick="filter('home', 'alphabetical', 'Mais populares')" class="btn-link lista2">
+                  <a href="javascript:void(0);" onclick="filter('home', 'popularity', 'Mais populares')" class="btn-link lista2">
                     <img class="icones fix4" src="img/home-removebg-preview.png" alt="" />
                     Home
                   </a>
@@ -80,6 +85,13 @@
                   Open World
                 </a>
                 </li>
+                <li class="lista2">
+                  <a href="javascript:void(0);" onclick="filter('category', 'anime', 'Estilo Anime')" class="btn-link lista2">
+                  <img class="icones fix4" src="img/Anime.png" alt="" />
+                  Anime
+                </a>
+                </li>
+                <li class="fundoicones"></li>
                 <li class="fundoicones"></li>
                 <li class="fundoicones"></li>
                 <li class="fundoicones"></li>
@@ -89,7 +101,139 @@
                 <li class="fundoicones"></li>
                 <li class="fundoicones"></li>
         </ul>
+
+        <ul class="menu-2" id="pc">
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('home', 'popularity', 'Mais populares(PC)', 'pc')" class="btn-link lista2">
+              <img class="icones fix4" src="img/home-removebg-preview.png" alt="" />
+              Home
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'fighting', 'Estilo luta (PC)', 'pc')" class="btn-link lista2">
+              <img class="icones" src="img/Punch_icon-removebg-preview.png" alt=""/>
+            Fighting
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'survival', 'Estilo sobrevivência (PC)', 'pc')" class="btn-link lista2">
+              <img class="icones" src="img/Survival-removebg-preview.png" alt="" />
+              Survival
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'card', 'Estilo cartas (PC)', 'pc')" class="btn-link lista2">
+              <img class="icones fix4" src="img/CardGame.png" alt="" />
+              Cards
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'shooter', 'Estilo atirar (PC)', 'pc')" class="btn-link lista2">
+              <img class="icones fix" src="img/shooter-removebg-preview.png" alt="" />
+            Shooting
+            </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'mmofps', 'Estilo fps (PC)' , 'pc')" class="btn-link lista2">
+            <img class="icones" src="img/mmo-fps-shooter-removebg-preview.png" alt="" />
+            MMOFPS
+          </a>
+          </li>
+            <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'action-rpg', 'Estilo rpg (PC)', 'pc')" class="btn-link lista2">
+            <img class="icones fix2" src="img/rpg.png" alt="" />
+            RPG
+          </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'open-world', 'Estilo mundo aberto(PC)', 'pc')" class="btn-link lista2">
+            <img class="icones fix3" src="img/Terra.png" alt="" />
+            Open World
+          </a>
+          </li>
+          <li class="lista2">
+            <a href="javascript:void(0);" onclick="filter('category', 'anime', 'Estilo Anime (PC)', 'pc')" class="btn-link lista2">
+            <img class="icones fix4" src="img/Anime.png" alt="" />
+            Anime
+          </a>
+          </li>
+          <li class="fundoicones"></li>
+          <li class="fundoicones"></li>
+          <li class="fundoicones"></li>
+          <li class="fundoicones"></li>
+          <li class="fundoicones"></li>
+          <li class="fundoicones"></li>
+          <li class="fundoicones"></li>
+          <li class="fundoicones"></li>
+          <li class="fundoicones"></li>
+        </ul>
    
+        <ul class="menu-2" id="browser">
+    <li class="lista2">
+      <a href="javascript:void(0);" onclick="filter('home', 'popularity', 'Mais populares (BROWSER)', 'browser')" class="btn-link lista2">
+        <img class="icones fix4" src="img/home-removebg-preview.png" alt="" />
+        Home
+      </a>
+    </li>
+    <li class="lista2">
+      <a href="javascript:void(0);" onclick="filter('category', 'fighting', 'Estilo luta (BROWSER)', 'browser')" class="btn-link lista2">
+        <img class="icones" src="img/Punch_icon-removebg-preview.png" alt=""/>
+      Fighting
+      </a>
+    </li>
+    <li class="lista2">
+      <a href="javascript:void(0);" onclick="filter('category', 'survival', 'Estilo sobrevivência (BROWSER)', 'browser')" class="btn-link lista2">
+        <img class="icones" src="img/Survival-removebg-preview.png" alt="" />
+        Survival
+      </a>
+    </li>
+    <li class="lista2">
+      <a href="javascript:void(0);" onclick="filter('category', 'card', 'Estilo cartas (BROWSER)', 'browser')" class="btn-link lista2">
+        <img class="icones fix4" src="img/CardGame.png" alt="" />
+        Cards
+      </a>
+    </li>
+    <li class="lista2">
+      <a href="javascript:void(0);" onclick="filter('category', 'shooter', 'Estilo atirar (BROWSER)', 'browser')" class="btn-link lista2">
+        <img class="icones fix" src="img/shooter-removebg-preview.png" alt="" />
+      Shooting
+      </a>
+    </li>
+    <li class="lista2">
+      <a href="javascript:void(0);" onclick="filter('category', 'mmofps', 'Estilo fps (BROWSER)', 'browser')" class="btn-link lista2">
+      <img class="icones" src="img/mmo-fps-shooter-removebg-preview.png" alt="" />
+      MMOFPS
+    </a>
+    </li>
+      <li class="lista2">
+      <a href="javascript:void(0);" onclick="filter('category', 'action-rpg', 'Estilo rpg (BROWSER)', 'browser')" class="btn-link lista2">
+      <img class="icones fix2" src="img/rpg.png" alt="" />
+      RPG
+    </a>
+    </li>
+    <li class="lista2">
+      <a href="javascript:void(0);" onclick="filter('category', 'open-world', 'Estilo mundo aberto (BROWSER)', 'browser')" class="btn-link lista2">
+      <img class="icones fix3" src="img/Terra.png" alt="" />
+      Open World
+    </a>
+    </li>
+    <li class="lista2">
+      <a href="javascript:void(0);" onclick="filter('category', 'anime', 'Estilo Anime (BROWSER)', 'browser')" class="btn-link lista2">
+      <img class="icones fix4" src="img/Anime.png" alt="" />
+      Anime
+    </a>
+    </li>
+    <li class="fundoicones"></li>
+    <li class="fundoicones"></li>
+    <li class="fundoicones"></li>
+    <li class="fundoicones"></li>
+    <li class="fundoicones"></li>
+    <li class="fundoicones"></li>
+    <li class="fundoicones"></li>
+    <li class="fundoicones"></li>
+    <li class="fundoicones"></li>
+      </ul>
+
       </nav>
     </div>
 
@@ -105,6 +249,7 @@
       </div>
 
       <div id="result-games"></div>
+      <div class="load" id="loading"></div>
 
     </div>
     
