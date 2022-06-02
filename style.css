@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #333333;
+  background: rgb(97, 48, 97);
   overflow-x: hidden;
 font-family: 'Poppins';}
 
@@ -30,7 +30,7 @@ position: relative;}
   font-family: 'Poppins';
   font-size: 16px;
   list-style-type: none;
-  margin-left: 15rem;
+  margin-left: 10rem;
   margin-top: 16px;
   border-bottom: 2px solid #ffffff;
   border-radius: 5px;
@@ -216,7 +216,7 @@ bottom: 0;text-align: center;padding: 20px 0;position: relative;}
   position: absolute;
   text-align: center;
   width: 20%;
-  background-color: #333333;
+  background-color: rgb(97, 48, 97);
   display: inline-block;}
     
 .main{
@@ -283,4 +283,72 @@ bottom: 0;text-align: center;padding: 20px 0;position: relative;}
   position: relative; top: 10px; left: 0px;
   width: 200px;
   height: 50px;
+}
+
+#result-games{
+  min-height: 500px;
+}
+
+#pc, #browser{
+  display: none;
+}
+.thumb-title a img{
+  width: 25px;
+  color: rgb(252, 235, 0) !important;
+}
+
+/*loading*/
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to { 
+      transform: rotate(360deg);
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to { 
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+.load {
+  text-align: center;
+  display: none;
+width: 50px;
+height: 50px;
+margin: 55px auto 0;
+border:solid 10px #8822aa;
+border-radius: 50%;
+border-right-color: transparent;
+border-bottom-color: transparent;
+ -webkit-transition: all 0.5s ease-in;
+  -webkit-animation-name:             rotate; 
+  -webkit-animation-duration:         1.0s; 
+  -webkit-animation-iteration-count:  infinite;
+  -webkit-animation-timing-function: linear;
+    
+     transition: all 0.5s ease-in;
+  animation-name:             rotate; 
+  animation-duration:         1.0s; 
+  animation-iteration-count:  infinite;
+  animation-timing-function: linear; 
+}
+.test {
+  position: relative; left: 500px; top: 30px;
+  width: 200px;
+  height: 40px;
+  border: 5px outset purple;
+  border-radius: 15px;
+  background: purple;
+  font-family: 'Poppins';
+  font-size: 20px;
+  color: #ffffff;
+  z-index: 2;
 }
