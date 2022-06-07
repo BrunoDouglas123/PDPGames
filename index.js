@@ -2,6 +2,8 @@ var favoritos = []
 var max = 10
 var categoria
 var categoria2
+var plataformafiltro
+var plataformafiltro2
 var estilo 
 var reset = 0
 
@@ -54,8 +56,8 @@ function search(url, title, myFavoritos){ //renderiza o jogo, recebe a url e o t
 }
 
 
-filter('home', 'popularity', 'Mais populares')
-function filter(myFilter, myFilter2, title, reset, plataforma = '', menu = 'default' ){
+filter('home', 'popularity', 'Most popular')
+function filter(myFilter, myFilter2, title, reset, plataformafiltro = '', menu = 'default' ){
 	//verifica se a variável plataforma = algum parâmetro, caso receba um parâmetro a variável 'param' irá concatenar com a URL
 	if(reset == 1) {
 		max = 10
@@ -63,12 +65,13 @@ function filter(myFilter, myFilter2, title, reset, plataforma = '', menu = 'defa
 	categoria = myFilter
 	categoria2 = myFilter2
 	estilo = title
+	plataformafiltro2 = plataformafiltro
 	console.log(estilo)
-	console.log(reset)
-	if (plataforma == ''){
+	console.log(plataformafiltro2)
+	if (plataformafiltro == ''){
 		var param = '';
 	} else {
-		var param = '&platform=' + plataforma;
+		var param = '&platform=' + plataformafiltro2;
 	}
 	//
 	var myFavoritos = false;	//Inicia os favoritos como falso.
