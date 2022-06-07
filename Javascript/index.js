@@ -106,6 +106,7 @@ function favoritarGame(id){
 //função para verificar elemento dentro do Array (true or false)
 function inArray(needle, haystack) {
     var length = haystack.length;
+	
     for(var i = 0; i < length; i++) {
         if(haystack[i] == needle) return true;
     }
