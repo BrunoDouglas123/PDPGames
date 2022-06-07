@@ -1,4 +1,11 @@
-var AllDates = []
+var favoritos = []
+var max = 10
+var categoria
+var categoria2
+var plataformafiltro
+var plataformafiltro2
+var estilo 
+var reset = 0
 
 const options = {
 	method: 'GET',
@@ -11,40 +18,106 @@ const options = {
 };
 
 
-function search(url, title){
-	fetch(url, options)
+function search(url, title, myFavoritos){ //renderiza o jogo, recebe a url e o título
+	fetch(url, options)				// url filtro dos dados que quero pegar, exemplo plataforma e tipo de jogo e o options é o array que da a permissão para poder pegar esses dados
 	.then(response => response.json())
 	.then(data => {
-		console.log(data);
 		var game = "<div class='row'>";     // para para 3 collumns a cada row
-		for(var i = 0; i < data.length; i++){
-			if(i%3==0 && i != 0){
-				game += "</div><div class='row'>"
-			}
-			game += '<div class="col"><div class="thumb"><img class="thumb-img" src="'+ data[i].thumbnail+'" alt="img"><div class="thumb-header"><h1 class="thumb-title">'+ data[i].title+'</h1></div><div class="thumb-body"><p>'+ data[i].short_description+'</p></div><div class="thumb-footer"><a href="'+ data[i].game_url+'" class="btn" target="_blank">Acessar game</a></div></div></div>'
+		var gamb = 0;
+		
+	
+		for(var i = 0; i < max; i++){
 			
-		}
-		game += "</div>";
-		var div = document.getElementById("result-games");
-		var titulo = document.getElementById("title");
-		titulo.innerHTML = title;
-		div.innerHTML = game;
 
+			if(myFavoritos){  //É acessado quando clickado no menu favoritos. 
+				if(gamb%3==0 && gamb != 0 && inArray(data[i].id, favoritos)){
+					game += "</div><div class='row'>";
+				}
+				if(inArray(data[i].id, favoritos)){ //Verifica se o ID do jogo existe dentro do meu Array de favoritos;
+					game += '<div class="col"><div class="thumb"><img class="thumb-img" src="'+ data[i].thumbnail+'" alt="img"><div class="thumb-header"><h1 class="thumb-title">'+ data[i].title+' <a href="javascript:void(0);" onclick="favoritarGame('+ data[i].id+')"><img src="img/star-regular.svg" width="30"></a></h1></div><div class="thumb-body"><p>'+ data[i].short_description+'</p></div><div class="thumb-footer"><a href="'+ data[i].game_url+'" class="btn" target="_blank">Access the game</a></div></div></div>'
+					gamb++;
+				}
+			}else{            //Lista todos os jogos de acordo com o filtro - MyFavoritos = falsa
+				if(gamb%3==0 && gamb != 0){
+					game += "</div><div class='row'>";
+				}
+				//concatena HTML do jogo
+				game += '<div class="col"><div class="thumb"><img class="thumb-img" src="'+ data[i].thumbnail+'" alt="img"><div class="thumb-header"><h1 class="thumb-title">'+ data[i].title+' <a href="javascript:void(0);" onclick="favoritarGame('+ data[i].id+')"><img src="img/star-regular.svg" width="30"></a></h1></div><div class="thumb-body"><p>'+ data[i].short_description+'</p></div><div class="thumb-footer"><a href="'+ data[i].game_url+'" class="btn" target="_blank">Access the game</a></div></div></div>'
+				gamb++;
+			}
+		}
+			
+		game += "</div>";
+		document.getElementById("result-games").innerHTML = game;
+		document.getElementById("title").innerHTML = title;
 	})
 	.catch(err => console.error(err));
+	
 }
 
 
-filter('home', 'alphabetical', 'Mais populares')
-function filter(myFilter, myFilter2, title){
-	if(myFilter == "top-10"){
-		var filter = "https://free-to-play-games-database.p.rapidapi.com/api/games";
-	} else if (myFilter == "category"){
-		var filter = "https://free-to-play-games-database.p.rapidapi.com/api/games?category="+myFilter2;
-	} else if (myFilter == "plataform"){
-		var filter = "https://free-to-play-games-database.p.rapidapi.com/api/games?platform="+myFilter2;
-	} else if (myFilter == 'home') {
-		var filter = "https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by="+myFilter2;
+filter('home', 'popularity', 'Most popular')
+function filter(myFilter, myFilter2, title, reset, plataformafiltro = '', menu = 'default' ){
+	//verifica se a variável plataforma = algum parâmetro, caso receba um parâmetro a variável 'param' irá concatenar com a URL
+	if(reset == 1) {
+		max = 10
 	}
-	search(filter, title);
+	categoria = myFilter
+	categoria2 = myFilter2
+	estilo = title
+	plataformafiltro2 = plataformafiltro
+	console.log(estilo)
+	console.log(plataformafiltro2)
+	if (plataformafiltro == ''){
+		var param = '';
+	} else {
+		var param = '&platform=' + plataformafiltro2;
+	}
+	//
+	var myFavoritos = false;	//Inicia os favoritos como falso.
+	if (myFilter == "category"){
+		var url = "https://free-to-play-games-database.p.rapidapi.com/api/games?category="+myFilter2+param;
+	} else if (myFilter == "plataform"){
+		var url = "https://free-to-play-games-database.p.rapidapi.com/api/games?platform="+myFilter2;
+	} else if (myFilter == 'home') {
+		var url = "https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by="+myFilter2+param;
+	} else if (myFilter == 'favoritos'){
+		myFavoritos = true;
+		var url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
+	}
+	if(menu == 'default'){
+		document.getElementById('pc').style.display = 'none';
+		document.getElementById('browser').style.display = 'none';
+		document.getElementById('default').style.display = 'inline-block';
+	} else if ( menu == 'pc'){
+		document.getElementById('pc').style.display = 'inline-block';
+		document.getElementById('browser').style.display = 'none';
+		document.getElementById('default').style.display = 'none';
+	} else if (menu == 'browser'){
+		document.getElementById('pc').style.display = 'none';
+		document.getElementById('browser').style.display = 'inline-block';
+		document.getElementById('default').style.display = 'none';
+	} 
+	search(url, title, myFavoritos);
+}
+
+//função que inclui no array de favoritos o ID do game. Que é incluso no evento de clickar. 
+function favoritarGame(id){
+	favoritos.push(id);
+}
+
+//função para verificar elemento dentro do Array (true or false)
+function inArray(needle, haystack) {
+    var length = haystack.length;
+    for(var i = 0; i < length; i++) {
+        if(haystack[i] == needle) return true;
+    }
+    return false;
+}
+
+function loadmore() {
+	console.log(max)
+	max = max+10
+	
+	
 }
