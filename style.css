@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 *{
   padding: 0;
   margin: 0;
@@ -6,84 +7,34 @@
 body {
   margin: 0;
   padding: 0;
-  background: #333333;
+  background: rgb(97, 48, 97);
   overflow-x: hidden;
-  font-family: 'Poppins';
-}
+font-family: 'Poppins';}
 
 /* Menu Navegacao 1 */
 .container {
-    background-color: rgb(97, 48, 97);
-    height: 71px;
-    width: 100%;
-}
-
-#img_logo {
-    display: flex;
-    margin-top: -5px;
-    margin-left: -12px;
-
-    width: 61px; 
-    height: 61px;
-
-    padding: 10px;
-}
+  background-color: rgb(97, 48, 97);
+  height: 71px;
+  width: 100%;
+position: relative;}
 
 #menu-1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-
-    margin-top: 0;
-    margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 0;
 }
 
 #lista1 {
-    color: #FFFFFF;
-    font-family: 'Poppins';
-    font-size: 16px;
-    list-style-type: none;
-
-    padding-right: 20px;
-    margin-top: 1px;
-}
-
-a {
-    text-decoration: none;
-}
-
-button {
-  font-family: 'Patron';
-  cursor: pointer;
-  outline: none;
-  font-size: 35px;
-  padding-top: -4px;
-  border-radius: 18px;
-  text-decoration: none;
-  background: none;
-  transition: box-shadow 0.1s;
-  color: rgb(97, 48, 97);
-  border: 4px solid rgb(97, 48, 97);
-  width: 120px;
-  height: 56px;
-  margin-top: -5px;
-  padding-left: 20px;
-}
-
-button:hover {
-    border: 4px solid brown;
-    color: brown;
-    box-shadow: 0px 0px 35px brown, 0px 0px 15px brown inset;
-    text-shadow: 0px 0px 10px brown, 0px 0px 3px;
-}
-
-#botao-menu {
-    text-decoration:none
-}
-
-#botao-menu {
-    outline:none;
+  color: #ffffff;
+  font-family: 'Poppins';
+  font-size: 16px;
+  list-style-type: none;
+  margin-left: 13rem;
+  margin-top: 16px;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 5px;
 }
 
 /* Menu Navegacao 2 */
@@ -104,69 +55,79 @@ ul {
   width: 10%;
   margin-top: 0px;
   padding-left: 15px;
-  
   border: 0px;
 }
 
 .icones {
-  position: relative;
-  
-  left: 5px;
-  padding-right: 10px;
-  
+  position: relative; top:10px; right: 40px;
+  padding-right: 0px;
+  margin-top: 5px;
   width: 35px;
-  
+  height: 30px;
   z-index: 2;
 }
 
 .lista2 {
+  position: relative; bottom: 8px; left: 0px;
   color: rgb(97, 48, 97);
   font-family: 'Poppins';
   font-weight: 600;
   font-size: medium;
   list-style-type: none;
-  margin-top: 20px;
+  margin-top: 23px;
   z-index: 2;
-  background-color: #fff;border-radius: 10px;height: auto;padding: 2px 10px;
 }
-
 .lista2 a{
   color: rgb(97, 48, 97);
   text-decoration: none;
 }
-
-.lista2:hover {
-    border: 4px solid brown;
-    color: brown;
-    box-shadow: 0px 0px 35px brown, 0px 0px 15px brown inset;
-    text-shadow: 0px 0px 10px brown, 0px 0px 3px;
+.fix {
+  position: relative; top: 10px;
 }
-
+.fix2 {
+  position: relative; right: 60px;
+}
+.fix3 {
+  position: relative; right: 28px; top: 11px;
+}
+.fix4 {
+  position: relative; right: 50px; top: 10px;
+}
 .fundoicones {
-  position: relative;
-  bottom: 710px;
-  width: 145px;
-  height: 30.5px;
+  position: relative; left: 0px; 
+  bottom: 585px;
+  width: 200px;
+  height: 40px;
   border-radius: 5px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  margin-top: 25px;
+
+  margin-top: 15px;
   background: #fff;
   list-style-type: none;
+  border: 5px solid #ffffff;
   z-index: 1;
 }
 
-a {
-  color: #fff;
-  font-family: 'Poppins';
-  font-weight: bold;
-  text-align: center;
-  list-style-type: none;
-  margin-top: 51px;
+button {
+  background-color: grey;
+  border-radius: 15px;
+
+  margin-top: 40px;
+  height: 40px;
+  width: 140px;
 }
 
 a {
+  font-size: 20px;
+  position: relative; 
+  right: 0px;
   list-style-type: none;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+a:hover{
+  color:black;
 }
 
 footer {
@@ -177,7 +138,7 @@ footer {
   width: 100%;
   margin-bottom: 0px;
   align-items: center;
-  bottom: 0;text-align: center;padding: 20px 0;position: relative;}
+bottom: 0;text-align: center;padding: 20px 0;position: relative;}
 
 .footer-containt {
   display: flex;
@@ -187,22 +148,12 @@ footer {
   margin: 0px;
 }
 
-.footer-icons {
-  display: inline-block;
-  flex-direction: row;
-  justify-self: center;
-}
-
-#rede {
-  width: 1.5rem;
-  margin-inline: 0.5rem;
-}
 
 #d-autorais {
   color: #fff;
   font-family: 'Poppins';
   font-weight: bold;
-  font-size: 15px;
+  font-size: 10px;
 
   padding-top: 0px;
 }
@@ -248,64 +199,177 @@ footer {
   justify-content: space-around;
   flex-direction: column;
   width: auto;
-  margin-top: 0px;
+  margin-top: 10px;
   padding: 10px;
   border: 0px;
   text-align: center;
 }
-    .nav{
-      left: 0;height: 100%;position: absolute;float: left;
+
+.nav{
+  left: 0px;
+  height: 100%;
+  position: absolute;
   text-align: center;
   width: 20%;
-  background-color: #333333;
-    display: inline-block;}
-    .main{
-      width: 80%;background-color: #f4f4f4;
-    position: relative;margin-left: 20%;display: inline-block;padding-bottom: 60px;}
-    .thumb{
-position: relative;border-radius: 8px;width: 20rem;;
-      height: auto;
-      box-shadow: 4px 7px 5px 0px rgba(0,0,0,0.13);
-      background-color: #fff;
-    float: left;margin-left: 20px;}
-    .thumb-header{
-      
-    padding: 6px 10px;position: relative;}
-
-    .thumb-img{
-      width: 100%;
-      height: auto;
-
-    border-radius: 8px 8px 0 0;position: relative;}
-
-    .thumb-body{
-
-    padding: 6px 10px;position: relative;}
-
-    .thumb-title{
-
-    padding: 0;margin: 0;font-size: 20px;font-weight: bold;}
-
-    .thumb-footer{
-    padding: 6px 10px;
-  text-align: right;height: auto;position: relative;background-color: #f4f4f4;border-top: 1px solid #ccc;min-height: 34px;}
-  
-    .thumb-footer a:hover {
-    border: 1px solid brown;
-    color: #fff;
-    box-shadow: 0px 0px 20px brown, 0px 0px 15px brown inset;
-    text-shadow: 0px 0px 10px brown, 0px 0px 3px;
+  background-color: rgb(97, 48, 97);
+  display: inline-block;}
+    
+.main{
+  width: 80%;background-color: #f4f4f4;
+  position: relative;margin-left: 20%;display: inline-block;padding-bottom: 60px;
 }
-  .thumb-footer a{
-    color: #fff;background: purple;border-radius: 6rem;
-    }
-
-    .btn1 {
+    
+.thumb{
+  position: relative;border-radius: 8px;width: 20rem;;
+  height: auto;
+  box-shadow: 4px 7px 5px 0px rgba(0,0,0,0.13);
+  background-color: #fff;
+  float: left;margin-left: 20px;
+}
   
-    text-decoration: none;font-size: .75rem;padding: 0.25rem 1rem;transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+.thumb-header{      
+  padding: 6px 10px;position: relative;
 }
 
-    .btn {
-      
+.thumb-img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;position: relative;
+}
+   
+.thumb-body{
+ padding: 6px 10px;position: relative;
+}
+  
+.thumb-title{
+  padding: 0;margin: 0;font-size: 20px;font-weight: bold;
+}
+
+.thumb-footer{
+  padding: 6px 10px;
+  text-align: right;height: auto;position: relative;background-color: #f4f4f4;border-top: 1px solid #ccc;min-height: 34px;
+}
+
+.thumb-footer a{
+  color: #fff;background: purple;border-radius: 6rem;
+}
+
+.btn {
     text-decoration: none;font-size: .75rem;padding: 0.25rem 1rem;transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: 0.3s;
+}
+
+.btn:hover{
+  color: black;
+}
+
+.divlogo {
+  position: relative; top: 1px; left: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 205px;
+  left: 50px;
+  top: 10px;
+  height: 60px;
+}
+
+.ancora-logo{
+  display: flex;
+}
+
+.logo {
+  position: relative; right: 0px; top: 5px;
+  margin-top: 0px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.logo-titulo{
+  display: flex;
+  position: relative;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 10px;
+  border: 0px;
+  padding: 0px;
+}
+
+.text {
+  position: relative; top: 10px; left: 0px;
+  width: 200px;
+  height: 50px;
+}
+
+#result-games{
+  min-height: 500px;
+}
+
+#pc, #browser{
+  display: none;
+}
+.thumb-title a img{
+  width: 25px;
+  color: rgb(252, 235, 0) !important;
+}
+
+/*loading*/
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to { 
+      transform: rotate(360deg);
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to { 
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+.load {
+  text-align: center;
+  display: none;
+width: 50px;
+height: 50px;
+margin: 55px auto 0;
+border:solid 10px #8822aa;
+border-radius: 50%;
+border-right-color: transparent;
+border-bottom-color: transparent;
+ -webkit-transition: all 0.5s ease-in;
+  -webkit-animation-name:             rotate; 
+  -webkit-animation-duration:         1.0s; 
+  -webkit-animation-iteration-count:  infinite;
+  -webkit-animation-timing-function: linear;
+    
+     transition: all 0.5s ease-in;
+  animation-name:             rotate; 
+  animation-duration:         1.0s; 
+  animation-iteration-count:  infinite;
+  animation-timing-function: linear; 
+}
+.test {
+  position: relative; left: 500px; top: 30px;
+  width: 200px;
+  height: 40px;
+  border: 5px outset transparent;
+  border-radius: 15px;
+  background: purple;
+  font-family: 'Poppins';
+  font-size: 20px;
+  color: #ffffff;
+  z-index: 2;
 }
