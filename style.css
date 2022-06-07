@@ -148,6 +148,13 @@ bottom: 0;text-align: center;padding: 20px 0;position: relative;}
   margin: 0px;
 }
 
+.footer-icons {
+  display: inline-block;
+  flex-direction: row;
+  justify-self: center;
+
+  padding-left: 20px;
+}
 
 #d-autorais {
   color: #fff;
@@ -156,6 +163,11 @@ bottom: 0;text-align: center;padding: 20px 0;position: relative;}
   font-size: 10px;
 
   padding-top: 0px;
+}
+
+#rede {
+  width: 1.5rem;
+  margin-inline: 0.5rem;
 }
 
 /* DataBase */
