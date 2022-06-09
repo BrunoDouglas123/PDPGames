@@ -5,3 +5,5 @@
 Link do Projeto:
 https://starforce12345.github.io/Projeto_PDPGames/
 
+<h1>Proposta: </h1>
+<h2>Catálogo de jogos o qual funciona com filtros, sendo ele para plataformas: PC e Browser e também filtro para tipos de jogos </h2>
